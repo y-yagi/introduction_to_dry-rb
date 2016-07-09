@@ -1,14 +1,4 @@
 ## Gems
 
-* dry-component
-  * Organize your code into reusable components
-* dry-configurable
-  * Thread-safe configuration mixin
-* dry-initializer
-  * DSL for defining initializer params and options
-* dry-logic
-  * Predicate logic with composable rules
-* dry-matcher
-  * Flexible, expressive pattern matching
-* dry-monads
-  * Useful, common monads in idiomatic Ruby
+他にも、[dry\-web\-roda: Roda integration for dry\-web apps](https://github.com/dry-rb/dry-web-roda)、[dry\-view: Data\-oriented view rendering system](https://github.com/dry-rb/dry-view) などなど
+

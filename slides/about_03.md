@@ -1,6 +1,14 @@
-## [dry-rb](http://dry-rb.org/)
+## Gems
 
-* dry-rb is a collection of next-generation Ruby libraries, each intended to encapsulate a common task
-* 各種タスク用のライブラリ群
-  * webアプリ用のライブラリ([dry\-web: Lightweight web application stack with pluggable routing front\-ends](https://github.com/dry-rb/dry-web))もある
-* 7/8時点で[dry\-rb \- Gems](http://dry-rb.org/gems/)に掲載されているライブラリは12個
+* dry-validation
+  * Powerful data validation based on predicate logic
+* dry-types
+  * Flexible type system with many built-in types
+* dry-transaction
+  * Business transaction DSL
+* dry-container
+  * Simple and thread-safe IoC container
+* dry-auto_inject
+  * Container-agnostic constructor injection mixin
+* dry-equalizer
+  * Simple mixin providing equality methods

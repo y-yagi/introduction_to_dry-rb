@@ -45,6 +45,7 @@
   "dry-transaction_08.md",
   "dry-transaction_09.md",
   "dry-transaction_10.md",
+  "super_dry_02.html",
   "dry-container_01.md",
   "dry-container_02.md",
   "dry-auto_inject_01.md",
@@ -69,5 +70,11 @@
   "dry-monads_02.md",
   "dry-monads_03.md",
   "dry-monads_04.md",
+  "gems_02.md",
+  "gems_03.md",
+  "gems_04.md",
+  "gems_05.md",
+  "matome_01.md",
+  "matome_02.md",
   "end.md"
 ]

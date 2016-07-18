@@ -13,7 +13,7 @@ puts maybe_user
 # どちらかがnilなら`Dry::Monads::Maybe::None`
 ```
 
-上記は`#map`を使って下記のよう書く事も出来る
+上記は`#fmap`を使って下記のように書く事も出来る
 
 ```ruby
 Dry::Monads::Maybe(user).fmap(&:address).fmap(&:street)

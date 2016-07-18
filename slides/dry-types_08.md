@@ -10,4 +10,4 @@ end
 Book.new(id: 1, name: 'ab')
 # => [Book.new] "ab" (String) has invalid type for :name (Dry::Types::StructError)
 ```
-* 制約には[dry\-logic](http://dry-rb.org/gems/dry-logic/)に登録されているルールを使用可能
+制約には[dry\-logic](http://dry-rb.org/gems/dry-logic/)に登録されているルールを使用可能

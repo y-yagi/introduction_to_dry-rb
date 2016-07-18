@@ -1,5 +1,7 @@
 ## Default
 
+デフォルト値の指定も可能
+
 ```ruby
 class Book < Dry::Types::Struct
   attribute :id, Types::Maybe::Coercible::Int

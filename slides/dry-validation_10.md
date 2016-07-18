@@ -1,6 +1,6 @@
 ## Schemas
 
-ruleの一覧が含まれたオブジェクト
+validationのルールを定義したオブジェクト
 
 ```ruby
 schema = Dry::Validation.Schema do

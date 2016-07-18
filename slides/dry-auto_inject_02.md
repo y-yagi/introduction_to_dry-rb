@@ -12,10 +12,9 @@ class DataStore
   end
 end
 
-# containerの作成
 my_container = Dry::Container.new
 
-# containerにoperationを等速
+# containerにoperationを登録
 my_container.register("data_store", -> { DataStore.new })
 my_container.register("user_repository", -> { my_container["data_store"].users })
 my_container.register("persist_user", -> { PersistUser.new })
@@ -23,7 +22,7 @@ my_container.register("persist_user", -> { PersistUser.new })
 # auto-injectionのセットアップ(Dry::AutoInject::Builderを作成している)
 AutoInject = Dry::AutoInject(my_container)
 
-# injectionをmixinする. これでcontainerのoperationを呼び出す事が出来る.
+# injectionをmixinする. これにより`PersistUser`クラスからcontainerのoperationを呼び出す事が出来るようになる.
 class PersistUser
   include AutoInject["user_repository"]
 

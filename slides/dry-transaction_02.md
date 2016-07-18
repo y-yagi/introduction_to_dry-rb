@@ -1,5 +1,7 @@
 ## dry-transaction
 
+まず行いたいoperationを登録する為のcontainerを作成する
+
 ```ruby
 require "dry-container"
 require "dry-monads"

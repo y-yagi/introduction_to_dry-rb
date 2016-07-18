@@ -1,6 +1,6 @@
 ## dry-component
 
-yamlの読み込み&ENV varによる使用する値の切り分けも可能
+yamlの読み込み & ENV varによる値の切り分けも可能
 
 ```yaml
 # /my/app/config/application.yml

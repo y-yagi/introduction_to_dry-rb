@@ -1,36 +1,22 @@
 ## dry-transaction
 
-各stepに引数を渡す事も可能
+`#call`にブロックを渡して、結果毎に処理を行う事も出来る
 
 ```ruby
-DB = []
+save_user.call("name" => "Jane", "email" => "jane@doe.com") do |m|
+  m.success do |value|
+    puts "Succeeded!"
+  end
 
-class Container
-  extend Dry::Container::Mixin
+  m.failure :validate do |error|
+    # `validate`ステップで失敗
+    puts "Please provide a valid user."
+  end
 
-  register :process, -> input {
-    Dry::Monads.Right(name: input["name"], email: input["email"])
-  }
-
-  register :validate, -> allowed, input {
-    input[:email].include?(allowed) ? Dry::Monads.Left(:not_valid) : Dry::Monads.Right(input)
-  }
-
-  register :persist, -> input {
-    DB << input; Dry::Monads.Right(input)
-  }
+  m.failure do |error|
+    # 何処かのステップで失敗
+    puts "Couldn’t save this user."
+  end
 end
 
-save_user = Dry.Transaction(container: Container) do
-  step :process
-  step :validate
-  step :persist
-end
-
-input = {"name" => "Jane", "email" => "jane@doe.com"}
-save_user.call(input, validate: ["doe.com"])
-# => Right({:name=>"Jane", :email=>"jane@doe.com"})
-
-save_user.call(input, validate: ["smith.com"])
-# => Left(:not_valid)
 ```

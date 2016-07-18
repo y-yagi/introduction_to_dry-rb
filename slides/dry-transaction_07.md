@@ -1,22 +1,10 @@
-## dry-transaction
+<img src="resources/img/railway_1.png" width=600px>
 
-`#call`にブロックを渡して、結果毎に処理を行う事も出来る
+ではなく
 
-```ruby
-save_user.call("name" => "Jane", "email" => "jane@doe.com") do |m|
-  m.success do |value|
-    puts "Succeeded!"
-  end
+<img src="resources/img/railway_2.png" width=600px>
 
-  m.failure :validate do |error|
-    # `validate`ステップで失敗
-    puts "Please provide a valid user."
-  end
+failureも一つのRail上で管理する
 
-  m.failure do |error|
-    # 何処かのステップで失敗
-    puts "Couldn’t save this user."
-  end
-end
+([Railway Oriented Programming in Elixir](http://zohaib.me/railway-programming-pattern-in-elixir/) から引用)
 
-```

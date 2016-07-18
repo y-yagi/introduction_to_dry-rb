@@ -22,5 +22,5 @@ user.name  # => 'Vladimir'
 user.role  # => 'admin'
 user.admin # => true
 ```
-* `param`は plain argumentを、`option`はHashを指定出来る
+* `param`には plain argumentを、`option`にはHashを指定出来る
 * `default`や`type`も指定可能

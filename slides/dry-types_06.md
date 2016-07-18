@@ -20,4 +20,4 @@ puts Book.new(id: 1, status: nil, published: 'yes').published #=> true
 
 * "1 on On ON t true True TRUE  y yes Yes YES"はtrueとして扱われる
 * "0 off Off OFF f false False FALSE n no No NO"はfalseとして扱われる
-* Stringのintやfloatへの変換をデフォルトで行ってくれる
+* Stringからintやfloatへの変換をデフォルトで行ってくれる

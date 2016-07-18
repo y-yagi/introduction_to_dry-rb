@@ -1,10 +1,5 @@
-<img src="resources/img/railway_1.png" width=600px>
+## dry-transaction
 
-ではなく
-
-<img src="resources/img/railway_2.png" width=600px>
-
-failureも一つのRail上で管理する
-
-([Railway Oriented Programming in Elixir](http://zohaib.me/railway-programming-pattern-in-elixir/) から引用)
-
+* 複数のビジネスロジックを一つの塊(container)として扱う
+* 塊として扱う事により、テストがしやすくなる、かつ再利用が可能となる(はず)
+* 戻り値は`Right` or `Left`のみを扱う事により、エラーハンドリングをシンプルに行えるようにする

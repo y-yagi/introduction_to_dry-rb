@@ -17,4 +17,4 @@ required(:sample).value(:empty?)
 # filled?
 required(:sample).value(:filled?)
 ```
-他にも`gt?`、`gteq?`、`max_size?`など
+他にも`gt?`、`gteq?`、`max_size?`などなど

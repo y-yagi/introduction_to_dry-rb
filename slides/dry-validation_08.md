@@ -1,5 +1,7 @@
 ## Macros
 
+よく行うであろう処理を簡易に記法出来るようにしたもの
+
 ```ruby
 # required
 Dry::Validation.Schema do
